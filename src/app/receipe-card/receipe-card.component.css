@@ -34,5 +34,9 @@
 
   .name
   {
-    place-content: center;
+    text-align: center;
+  }
+  .prep-time{
+    text-align: center;
+
   }
