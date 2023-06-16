@@ -1,0 +1,14 @@
+<!-- <p>works....</p> -->
+<form [formGroup]="searchForm">
+  <input
+    type="text"
+    placeholder="Enter Ingredients..."
+    formControlName="Ingredients"
+  />
+</form>
+
+<ul>
+  <li *ngFor="let r of receipes">
+    {{ r.name }}
+  </li>
+</ul>
