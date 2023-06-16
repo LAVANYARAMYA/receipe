@@ -1,0 +1,19 @@
+/* .list
+{
+    list-style-type: none;
+}
+.image-container{
+    width: 400px;
+    height: 400px;;
+}
+.ins
+{
+    justify-content: center;
+} */
+
+.receipes-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }

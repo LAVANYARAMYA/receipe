@@ -1,4 +1,4 @@
-<p>works....</p>
+<!-- <p>works....</p> -->
 <form [formGroup]="searchForm">
   <input
     type="text"
@@ -7,8 +7,44 @@
   />
 </form>
 
-<ul>
-  <li *ngFor="let r of receipes">
-    {{ r.name }}
+<app-receipe-card class="receipes-container" 
+        *ngFor="let r of receipes" [receipe]="r">
+
+</app-receipe-card>
+
+<!-- <li>{{receipes}}</li> -->
+
+
+
+
+<!-- <ul>
+  <div class="rece-container">
+  <li class="list" *ngFor="let r of receipes">
+   
+   <img class="image-container" src="{{r.imglink}}" alt="{{r.name}}">
+   {{ r.name }}
+   <p class="ins">{{r.instructions}}</p>
+   <h2>{{r.servingsize}}</h2>
+   <h2>{{r.preptime}}</h2>
+
   </li>
-</ul>
+</div>
+</ul> -->
+
+
+
+
+<!-- <div class="movie-container">
+    <img class="movie-poster" [src]="movie.poster" [alt]="movie.name">
+    <div class="movie-spec">
+    <h2>{{movie.name}}</h2>
+    <h2 >⭐{{movie.rating}}</h2>
+</div>
+<button (click)="toggleSummary()">ToggleSummary</button>
+<button (click)="goToDetails(movie.id)">Info</button>
+    <p class="movie-summary" *ngIf="show">{{movie.summary}}</p>
+    <div class="action-items">
+        <app-counter></app-counter>
+        <button (click)="delMovie(movie.id)">Delete</button>
+    </div>
+</div> -->
