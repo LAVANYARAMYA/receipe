@@ -18,6 +18,7 @@ export class EditMovieComponent {
   addMovieForm = this.fb.group({
     id: [''],
     name: ['', Validators.required],
+    ingredients: ['', Validators.required],
     poster: ['', [Validators.required, Validators.pattern('^(http|https).*')]],
     rating: [
       null,
@@ -59,6 +60,11 @@ export class EditMovieComponent {
 
   get name() {
     return this.addMovieForm.get('name');
+  }
+
+  get ingredients()
+  {
+    return this.addMovieForm.get('ingredients');
   }
   get poster() {
     return this.addMovieForm.get('poster');
