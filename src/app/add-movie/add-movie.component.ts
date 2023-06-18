@@ -19,6 +19,7 @@ import { MoviesService } from '../movies.service';
 export class AddMovieComponent {
   addMovieForm = this.fb.group({
     name: ['', Validators.required],
+    ingredients: ['', Validators.required],
     poster: ['', [Validators.required, Validators.pattern('^(http|https).*')]],
     rating: ['', [Validators.required, Validators.min(0), Validators.max(10)]],
     summary: ['', [Validators.required, Validators.minLength(20)]],
@@ -38,7 +39,7 @@ export class AddMovieComponent {
       const newMovie = this.addMovieForm.value;
       console.log(newMovie);
       this.moviesService.addMovie(newMovie as any).subscribe(() => {
-        this.router.navigate(['/movies']);
+        this.router.navigate(['/receipes']);
       });
     }
   }
@@ -46,6 +47,11 @@ export class AddMovieComponent {
   get name() {
     return this.addMovieForm.get('name');
   }
+
+  get ingredients() {
+    return this.addMovieForm.get('ingredients');
+  }
+
   get poster() {
     return this.addMovieForm.get('poster');
   }

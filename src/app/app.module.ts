@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'receipes', component: MovieListComponent },
 
-  { path: 'movies/add', component: AddMovieComponent },
+  { path: 'receipes/add', component: AddMovieComponent },
 
   { path: 'receipes/:id', component: MovieDetailsComponent },
   { path: 'receipes/edit/:id', component: EditMovieComponent },
