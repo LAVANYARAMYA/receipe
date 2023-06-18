@@ -6,16 +6,18 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./receipe-card.component.css']
 })
 export class ReceipeCardComponent {
+
   receipes:any;
 
   @Input() receipe={
-    "name": "tomato rice",
-    "ingredients": "tomato,rice",
-    "imglink":"https://th.bing.com/th/id/R.b483a4b2a3ec58248e3045322615ff9a?rik=C%2fzjZRLzn87svg&riu=http%3a%2f%2fonedaycart.com%2fodcb%2fwp-content%2fuploads%2f2016%2f04%2fmaxresdefault1.jpg&ehk=2p0ZrfvEsujXDC35DaO5wmb3qPgBGimBrWk68DL%2bYg8%3d&risl=&pid=ImgRaw&r=0",
- 
-    "instructions": "Wash and drain the basmati rice and soak for about 20 minutes. Take a deep pan, put it on medium flame and pour water into it. Bring it to a boil, and then add the soaked rice. Cover the pan with a lid and cook on medium flame till the rice becomes soft, but not mushy",
-    "servingsize": 2,
-    "preptime": 30
-   }
+    "id": "100",
+    "name": "Chicken Rice",
+    "poster": "https://th.bing.com/th/id/OIP.foSWCBsiSQym4ehEoExeLQHaKo?w=202&h=290&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    "rating": 8.8,
+    "summary": "Hainanese chicken rice is a dish of poached chicken and seasoned rice, served with chilli sauce and usually with cucumber garnishes.",
+    "trailer": "https://www.youtube.com/embed/AG-L71lGvdI",
+    "ingredients":"chicken,rice"
+
+  }
 
 }

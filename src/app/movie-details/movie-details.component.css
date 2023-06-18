@@ -1,0 +1,14 @@
+.movie-spec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .movie-container {
+    max-width: 700px;
+  }
+  
+  .movie-content {
+    padding: 16px;
+  }
+  

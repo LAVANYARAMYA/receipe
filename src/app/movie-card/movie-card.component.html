@@ -1,0 +1,28 @@
+<mat-card class="res-container">
+  
+    <img class="res-poster" mat-card-image [src]="movie.poster" [alt]="movie.name">
+    <mat-card-content>
+      <div class="movie-spec">
+        <h2 class="name" >{{ movie.name }}</h2>
+        <p>⭐ {{ movie.rating }}</p>
+      </div>
+      <p *ngIf="show" class="movie-summary">{{ movie.summary }}</p>
+    </mat-card-content>
+    <mat-card-actions class="actions">
+      <button   mat-raised-button color="primary" (click)="toggleSummary()">Toggle</button>
+    
+    <button mat-raised-button color="primary" (click)="goToDetails(movie.id)">Info</button>
+    <button mat-raised-button color="primary" (click)="goToEdit(movie.id)">Edit</button>
+    <div class="action-items">
+      <!-- <app-counter></app-counter> -->
+      <!-- Step 1 -->
+  
+      <button mat-fab color="warn" aria-label="Example icon button with a delete icon" (click)="delMovie(movie.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+     
+    </div>
+     
+    </mat-card-actions>
+  </mat-card>
+  

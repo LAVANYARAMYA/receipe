@@ -1,0 +1,11 @@
+<!-- <app-add-movie></app-add-movie> -->
+
+<div class="movie-list-container">
+    <!-- Step 3 -->
+    <app-movie-card
+      *ngFor="let mv of movieList$ | async; trackBy: trackByFn"
+      [movie]="mv"
+      (delete)="deleteGetMovie($event)"
+    ></app-movie-card>
+  </div>
+  

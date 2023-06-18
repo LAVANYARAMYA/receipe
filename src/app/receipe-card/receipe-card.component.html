@@ -1,38 +1,10 @@
-<!-- <p>receipe-card works!</p> -->
-
-<!-- <h2>{{}}</h2> -->
-
-
-
-    <div class="res-container">
-      <img class="res-poster" [src]="receipe.imglink" [alt]="receipe.name">
-      <div class="res-spec"></div>
-        <h2 class="name" >{{ receipe.name }}</h2>
-        <h2 class="prep-time">⏲ {{receipe.preptime}}</h2>
-        <p class="res-summary">{{receipe.instructions}}</p>
-      </div>
-     
-    
-     <!-- <h2>{{receipe.servingsize}}</h2>
-     -->
-    
- 
- 
-
-
-
-
-  <!-- <div class="movie-container">
-    <img class="movie-poster" [src]="movie.poster" [alt]="movie.name">
-    <div class="movie-spec">
-    <h2>{{movie.name}}</h2>
-    <h2 >⭐{{movie.rating}}</h2>
-</div>
-<button (click)="toggleSummary()">ToggleSummary</button>
-<button (click)="goToDetails(movie.id)">Info</button>
-    <p class="movie-summary" *ngIf="show">{{movie.summary}}</p>
-    <div class="action-items">
-        <app-counter></app-counter>
-        <button (click)="delMovie(movie.id)">Delete</button>
-    </div>
-</div> -->
+<mat-card class="res-container">
+  <h2 class="name" >{{ receipe.name }}</h2>
+  <img class="res-poster" mat-card-image [src]="receipe.poster" [alt]="receipe.name">
+  <mat-card-content>
+    <p class="res-summary">
+      {{receipe.summary}}
+    </p>
+  </mat-card-content>
+  
+</mat-card>

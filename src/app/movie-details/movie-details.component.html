@@ -1,0 +1,22 @@
+<div *ngIf="movie$ | async as movie">
+    <iframe
+      width="100%"
+      height="630"
+      [src]="movie.trailer"
+      title="Andrew Tate Explains - (How To Fix America)"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  
+    <div *ngIf="movie" class="movie-container">
+      <div class="movie-content">
+        <div class="movie-spec">
+          <h2>{{ movie.name }}</h2>
+          <p>⭐ {{ movie.rating }}</p>
+        </div>
+        <p class="movie-summary">{{ movie.summary }}</p>
+      </div>
+    </div>
+  </div>
+  

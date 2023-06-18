@@ -1,0 +1,88 @@
+<form class="add-movie-form" [formGroup]="addMovieForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input type="text" matInput placeholder="name" formControlName="name" />
+      <mat-error *ngIf="name?.errors?.['required']">
+        Why not to fill this name 😉?
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Rating</mat-label>
+      <input
+        type="number"
+        matInput
+        placeholder="rating"
+        formControlName="rating"
+      />
+      <mat-error *ngIf="rating?.errors?.['required']">
+        Why not to fill this rating 😉?
+      </mat-error>
+  
+      <mat-error *ngIf="rating?.errors?.['min']"
+        >Fill up with extra rating ⭐</mat-error
+      >
+      <mat-error *ngIf="rating?.errors?.['max']">Too much rating 😯</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Poster</mat-label>
+      <input type="text" matInput placeholder="poster" formControlName="poster" />
+      <mat-error *ngIf="poster?.errors?.['required']">
+        Why not to fill this poster 😉?
+      </mat-error>
+  
+      <mat-error *ngIf="poster?.errors?.['pattern']"
+        >Need a valid URL 😉</mat-error
+      >
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Summary</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="summary"
+        formControlName="summary"
+      />
+      <mat-error *ngIf="summary?.errors?.['required']">
+        Why not to fill this summary 😉?
+      </mat-error>
+      <mat-error *ngIf="summary?.errors?.['minlength']">
+        More wordings will be appreciated 😁
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Trailer</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="trailer"
+        formControlName="trailer"
+      />
+      <mat-error *ngIf="trailer?.errors?.['required']">
+        Why not to fill this trailer 😉?
+      </mat-error>
+      <mat-error *ngIf="trailer?.errors?.['pattern']"
+        >Need a valid URL 😉</mat-error
+      >
+    </mat-form-field>
+  
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="addMovieForm.invalid"
+    >
+      Add Movie
+    </button>
+  </form>
+  
+  <!-- <p>{{ addMovieForm.status }}</p> -->
+  <!-- <p>Errors</p>
+  <p>Name: {{ addMovieForm.get("username")?.errors | json }}</p>
+  <p>Age: {{ addMovieForm.get("age")?.errors | json }}</p> -->
+  
+  <!-- Sysn@f123 -->
+  

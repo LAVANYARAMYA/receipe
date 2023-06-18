@@ -1,0 +1,38 @@
+.users-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nav-links-container {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+  }
+  
+  .custom-button {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #ee8282;
+    /* eea482 */
+  
+  }
+  
+  .matcard
+  {
+    background-color: #a4c7f3
+  }
+  
+  .button-container
+  {
+    
+      display: flex;
+      justify-content: center;
+    
+  }
+  .bod
+  {
+    background-color: aquamarine;
+  }
